@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>03-事件源对象.html</title>
+  <style>
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    var div = document.querySelector("div");
+    // div.onclick=function(e){
+    //   console.log(e);
+    // }
+
+    div.addEventListener("touchstart",function(e){
+      console.log(e);
+    });
+
+    /* 
+     触屏事件不能够通过 on+事件名的方式绑定
+        一些新的事件都是不能通过on+事件名的方式绑定的
+         建议在学习新的事件的时候 通过    addEventListener  
+    
+     */
+  </script>
+</body>
+
+</html>

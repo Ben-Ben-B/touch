@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>02-触屏的3个事件.html</title>
+  <style>
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    var div = document.querySelector("div");
+    /*  红 -  蓝  绿  */
+    // 手指按下事件
+    div.addEventListener("touchstart",function(){
+      div.style.backgroundColor="red";
+      console.log("red");
+    })
+    // 手指移动事件
+    div.addEventListener("touchmove",function(){
+        div.style.backgroundColor="green";
+      console.log("green");
+    })
+    // 手指松开事件
+    div.addEventListener("touchend",function(){
+        div.style.backgroundColor="blue";
+      console.log("blue");
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 理想视口的标准的代码 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <!--  不标准的 -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>05-3对坐标属性.html</title>
+  <style>
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: 100px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    var div = document.querySelector("div");
+    div.addEventListener("touchstart", function (e) {
+
+      // 相对于可视区域的坐标
+      var clientX = parseInt(e.targetTouches[0].clientX);
+      var clientY = parseInt(e.targetTouches[0].clientY);
+
+      // 相对与页面的坐标
+      // var pageX = parseInt(e.targetTouches[0].pageX);
+      // var pageY = parseInt(e.targetTouches[0].pageY);
+
+      // 相对于屏幕的坐标
+      var screenX = parseInt(e.targetTouches[0].screenX);
+      var screenY = parseInt(e.targetTouches[0].screenY);
+
+      div.innerHTML = "clientX:" + clientX + " clientY:" + clientY;
+      div.innerHTML += "<br>";
+      // div.innerHTML += "pageX:" + pageX + " pageY:" + pageY;
+
+      div.innerHTML += "screenX:" + screenX + " screenY:" + screenY;
+    });
+  </script>
+</body>
+
+</html>

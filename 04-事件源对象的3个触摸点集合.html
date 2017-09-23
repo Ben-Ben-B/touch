@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>04-事件源对象的3个触摸点集合.html</title>
+    <style>
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector("div");
+        // div.addEventListener("touchstart",function(e){
+        //   // touches 屏幕上所有的触摸点的集合
+        //   // targetTouches 目标元素上 所有的触摸点的集合 
+        //   // changedTouches  在目标元素上 发生了 进入 离开 移动 的触摸点集合
+        //   console.log(e.touches.length,e.targetTouches.length,e.changedTouches.length);
+        // });
+
+        // div.addEventListener("touchmove",function(e){
+        //   //    touches 1
+        //   //   targetTouches
+        //   // changedTouches 1
+        //   //  console.log(e.touches.length,e.targetTouches.length,e.changedTouches.length);
+        // });
+
+        // div.addEventListener("touchend",function(e){
+        //   //touches 0
+        //   // targetTouches 0
+        //   // changedTouches 1  
+        //     //  只要想获取到 手指离开的时候 的触摸点  touchend  changedTouches  
+        //     // console.log(e.touches.length,e.targetTouches.length,e.changedTouches.length);
+        // });
+        div.addEventListener("touchstart", function(e) {
+            // console.log(e.touches.length, e.targetTouches.length, e.changedTouches.length)
+        })
+
+        div.addEventListener("touchmove", function(e) {
+            // console.log(e.touches.length, e.targetTouches.length, e.changedTouches.length)
+        })
+        div.addEventListener("touchend", function(e) {
+            console.log(e.touches.length, e.targetTouches.length, e.changedTouches.length).
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>06-click和start,end事件执行顺序比较.html</title>
+  <style>
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    var div = document.querySelector("div");
+    div.addEventListener("touchstart", function () {
+      // console.log("touchstart");
+      // 开启定时器-- 定时器的名字 
+      console.time("go");
+    })
+   
+    div.onclick = function () {
+      // console.log("click");
+      // 结束计时  触摸事件的执行时间比鼠标点击事件click要快200ms~300ms 
+      console.timeEnd("go");
+    }
+
+    //  div.addEventListener("touchend", function () {
+    //   // console.log("touchend")
+    // })
+  </script>
+</body>
+
+</html>

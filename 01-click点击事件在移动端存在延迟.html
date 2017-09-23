@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>01-click点击事件在移动端存在延迟.html</title>
+  <style>
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    var div = document.querySelector("div");
+    div.onclick=function(){
+      alert("这个是鼠标点击事件");
+    }
+
+    /* 
+    双击操作 也是由单击事件 组成
+    在pc端上 双击 也会触发单击事件
+    在移动端  第一次单击的时候
+    
+     会等待一小段时间
+         在一段时间过后   如果 还有第二次单击事件的长生 - 会触发双击放大 
+                              没有了第二次的单击  才会触发 单击事件 
+
+    
+     */
+  </script>
+</body>
+
+</html>

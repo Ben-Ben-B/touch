@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>10-测试插件.html</title>
+  <style>
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script src="./itcastEvent.js"></script>
+  <script>
+    var dom = document.querySelector("div");
+
+    // itcast(dom).tap(function(){
+    //   console.log("自己写的tap");
+    // });
+    itcast(dom).swipe(function(d){
+      console.log(d);
+    });
+  </script>
+</body>
+
+</html>
